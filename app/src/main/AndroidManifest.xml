@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ramalingam.localforecast">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:fullBackupOnly="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAgbgz93mkIBpwnYA8q8-szb6VPbVZnKIo" />
+
+        <activity
+            android:name="com.ramalingam.localforecast.activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.ramalingam.localforecast.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+
+        <activity
+            android:name="com.ramalingam.localforecast.activities.CityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+
+        <service
+            android:name="com.ramalingam.localforecast.custom.FetchAddressIntentService"
+            android:exported="false" />
+
+        <service android:name="com.ramalingam.localforecast.notifications.AlarmService" />
+
+        <receiver
+            android:name="com.ramalingam.localforecast.notifications.AlarmReceiver"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.ramalingam.localforecast.notifications.OnBootReceiver"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/AD_MOB_APPLICATION_ID" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <service
+            android:name=".pushnotification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

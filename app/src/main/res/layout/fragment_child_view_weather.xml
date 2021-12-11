@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.live.weather.forcast.temperature.report.volley.TouchImageView
+        android:id="@+id/imgWeatherFgImgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="center" />
+
+    <WebView
+        android:id="@+id/urlWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!--<fragment
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MainActivity" />-->
+
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapFragmentWeather"/>
+    <!--
+    android:scaleType="centerInside"
+    -->
+</RelativeLayout>

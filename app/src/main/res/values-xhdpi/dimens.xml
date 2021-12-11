@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="drawer_item_size">16sp</dimen>
+    <dimen name="main_weather_image_size">80dp</dimen>
+    <dimen name="main_date_time_size">16sp</dimen>
+    <dimen name="main_temp_size">26sp</dimen>
+    <dimen name="min_max_temp_size">16sp</dimen>
+    <dimen name="sub_date_temp_size">16sp</dimen>
+    <dimen name="sub_weather_image_size">40dp</dimen>
+
+    <dimen name="direction_size">16sp</dimen>
+    <dimen name="speed_size">16sp</dimen>
+
+    <dimen name="pressure_size">16sp</dimen>
+    <dimen name="visibility_size">16sp</dimen>
+    <dimen name="humidity_size">16sp</dimen>
+</resources>

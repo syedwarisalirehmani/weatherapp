@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:paddingTop="@dimen/status_bar_padding">
+
+    <!--android:fitsSystemWindows="true"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llAdViewActCityList"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/toolBarActMain"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBackActCityList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/five_dp"
+                android:padding="@dimen/ten_dp"
+                android:src="@drawable/round_arrow_back_white_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleToolbarActCityList"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:padding="@dimen/ten_dp"
+                android:text="@string/select_city"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchViewActCityList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:queryHint="Search Here"
+                android:theme="@style/SearchViewStyle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCurrentLocationActCityList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/five_dp"
+                android:padding="@dimen/ten_dp"
+                android:src="@drawable/round_my_location_white_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorLayoutTransparent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCityListActCityList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorHalfTransparent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoDataActCityList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@color/colorLayoutTransparent"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llAdViewActCityList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/llAdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/llAdViewFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorWhite"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

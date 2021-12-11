@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedSvFgCityWeather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLayoutTransparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHalfTransparent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/five_dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCurrentWeatherFgCityWeather"
+                    android:layout_marginEnd="@dimen/fifty_dp"
+                    android:layout_width="@dimen/main_weather_image_size"
+                    android:layout_height="@dimen/main_weather_image_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDateFgCityWeather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/fifty_dp"
+                    android:layout_toEndOf="@+id/imgCurrentWeatherFgCityWeather"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/main_date_time_size" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCurrentMinMaxTempFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/five_dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:textSize="@dimen/min_max_temp_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCurrentTempFgCityWeather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/five_dp"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/main_temp_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Separator-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:background="@color/colorFullTransparent" />
+
+        <!--Separator-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:background="@color/colorFullTransparent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWeatherListFgCityWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            tools:listitem="@layout/cell_city_weather_list"
+            android:background="@color/colorHalfTransparent"
+            android:padding="@dimen/five_dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHalfTransparent"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten_dp">
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_weather_earth" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sun_rise" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/hint_sun_rise"
+                    android:textColor="@color/colorWhite" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSunriseFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="12"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sun_set" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/hint_sun_set"
+                    android:textColor="@color/colorWhite" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSunsetFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="12"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Separator-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:background="@color/colorFullTransparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHalfTransparent"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten_dp">
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgWindMillFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/a0"
+                    android:adjustViewBounds="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDirectionFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="NNE"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/direction_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSpeedFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="50"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/speed_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Separator-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:background="@color/colorFullTransparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHalfTransparent"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten_dp">
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/hint_pressure"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/pressure_size" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_pressure" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPressureFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="12"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/pressure_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/hint_visibility"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/visibility_size" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_visibility" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVisibilityFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="12"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/visibility_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/hint_humidity"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/humidity_size" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_humidity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHumidityFgCityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="12"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/humidity_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

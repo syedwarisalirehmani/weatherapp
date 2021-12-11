@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/gardient_top_bottom.xml" value="0.34791666666666665" />
+        <entry key="app/src/main/res/layout/activity_city_list.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/fragment_city_weather.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/fragment_temperature_forecast.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/fragment_weather_map.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/fragment_wind_speed.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/item_notification_coll.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/item_notification_expand.xml" value="0.33177083333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

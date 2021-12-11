@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayoutActMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:openDrawer="start">
+    <!--android:fitsSystemWindows="true"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/status_bar_padding">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbarActMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFullTransparent"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgToggleActMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/five_dp"
+                android:padding="@dimen/ten_dp"
+                android:src="@drawable/round_menu_white_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleToolbarActMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imgToggleActMain"
+                android:layout_toStartOf="@+id/imgPlusRefreshActMain"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPlusRefreshActMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/five_dp"
+                android:padding="@dimen/ten_dp"
+                android:src="@drawable/round_add_white_24" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frameActMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llAdViewActMain"
+            android:layout_below="@+id/rlToolbarActMain"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:id="@+id/llAdViewActMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/llAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/llAdViewFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navViewActMain"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/bg1"
+        android:fitsSystemWindows="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorNavViewTransparent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/ten_dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/ten_dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgHeaderActMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:src="@drawable/ic_menu_logo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:text="@string/nav_weather"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/one_dp"
+                        android:background="@color/colorSeparator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/ten_dp">
+
+                        <!--Weather-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvWeatherActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/round_wb_sunny_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_weather"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                        <!--Live Weather-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLiveWeatherActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/round_filter_drama_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_live_weather"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                        <!--Rainfall Forecast-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRainfallForecastActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/ic_baseline_speed_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_rain_fall_forecast"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                        <!--Temperature Forecast-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTemperatureForecastActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/round_temperature_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_temp_forecast"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/one_dp"
+                        android:background="@color/colorSeparator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/ten_dp">
+
+                        <!--Share-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvShareActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/round_share_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_share"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                        <!--Rate-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRateActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/round_star_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_rate"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                        <!--Feedback-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFeedbackActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/round_perm_contact_calendar_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_feed_back"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                        <!--More App-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMoreAppActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:visibility="gone"
+                            android:drawableStart="@drawable/round_apps_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_more_app"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/one_dp"
+                        android:background="@color/colorSeparator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/ten_dp">
+
+                        <!--Exit-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvExitActMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:drawableStart="@drawable/round_exit_to_app_white_24"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/nav_exit"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/drawer_item_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

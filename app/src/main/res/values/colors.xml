@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#977b5a</color>
+    <color name="colorPrimaryDark">#00000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTheme">#7c6243</color>
+
+    <color name="colorRed">#FF0000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorGrey">#565656</color>
+    <color name="colorBorder">#d7d7d7</color>
+
+    <color name="colorFullTransparent">#00000000</color>
+    <color name="colorHalfTransparent">#80000000</color>
+    <color name="colorNavViewTransparent">#b4000000</color>
+
+    <color name="colorLayoutTransparent">#32000000</color>
+    <color name="colorSeparator">#dad5d5</color>
+    <color name="statusBarColor">#6b78c7</color>
+</resources>

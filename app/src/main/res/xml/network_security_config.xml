@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">query.yahooapis.com</domain>
+        <domain includeSubdomains="true">api.weatherstack.com</domain>
+        <domain includeSubdomains="true">api.openweathermap.org</domain>
+        <domain includeSubdomains="true">openweathermap.org</domain>
+        <domain includeSubdomains="true">moba.ciao.jp</domain>
+        <domain includeSubdomains="true">www.monsoondata.org</domain>
+        <domain includeSubdomains="true">satellite.imd.gov.in</domain>
+        <domain includeSubdomains="true">tropic.ssec.wisc.edu</domain>
+        <domain includeSubdomains="true">www.mosdac.gov.in</domain>
+        <domain includeSubdomains="true">tile.openweathermap.org</domain>
+        <domain includeSubdomains="true">nwp.imd.gov.in</domain>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMainClCityList"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/five_dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCityNameClCityList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/five_dp"
+        android:maxLines="1"
+        android:textColor="@color/colorWhite"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+</LinearLayout>
